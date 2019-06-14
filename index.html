@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet">
     <!-- ICONS -->
@@ -13,21 +12,24 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="img/boat-b.ico" type="image/x-icon">
-    <title>Sailboat - Beacause the internet is an ocean</title>
+    <title>Sailboat - Social Media Post Simulator</title>
 </head>
 <body>
     <div class="header">
         <ul class="navbar">
             <li class="logo"><h2>Sailboat</h2><img src="img/boat-o.svg" alt="logo"></li>
-            <li><a id="dive">Dive</a></li>
-            <li><a>Trending</a></li>
-            <li><a>Profile</a></li>
+            <li><a class="current" id="dive">Dive</a></li>
+            <!-- <li><a>Profile</a></li> -->
         </ul>
     </div>
-
-    <div class="container">  
-        
-        <div class="post">
+   
+    <div class="container">
+        <div class="compose">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Write your as random person"></textarea>
+            <button class="post-now">POST</button>
+        </div>
+        <div class="feed">
+            <div id="0" class="post">
                 <div class="post-head">
                     <img class="user" src="img/arman.jpg" alt="user">
                     <div>
@@ -37,18 +39,20 @@
                     <button class="more-btn"><i class="material-icons">more_vert</i></button>
                 </div>
                 <div class="post-body">
-                    <p>“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.” ― Albert Einstein</p>
+                    <p>“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.” ― Albert Einstein<br>
+                    </p>
+                    
                     <img>
                 </div>
                 <div class="post-foot">
-                    <button class="post-btn likes"><i class="material-icons">thumb_up</i><span class="likes"> 0</span></button>
+                    <button id="0" class="post-btn likes"><i class="material-icons">thumb_up</i><span class="likes"> 0</span></button>
                     <button class="post-btn comment"><i class="material-icons">comment</i><span class="comment"> 0</span></button>
                     <button class="post-btn share"><i class="material-icons">share</i><span class="share"> 0</span></button>
                 </div>
             </div>
-
+        </div>
     </div>
-
+    <div class="fade-overlay"></div>
     <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.js"></script>
     <script src="js/main.js"></script>
 </head>
